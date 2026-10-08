@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Vasanthkumar Selvakumar — Mechanical engineer and M.Sc. Sustainable Maritime Engineering student. Portfolio in design, manufacturing and quality engineering.">
+  <meta name="theme-color" content="#0c1729">
+  <title>Vasanthkumar Selvakumar | Mechanical Engineering Portfolio</title>
+  <style>
+    :root { --ink:#0f1b30; --muted:#5d6980; --accent:#1260a4; --cyan:#52d6df; --line:#dfe7f1; --cream:#f6f8fc; --white:#fff; --radius:20px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; background:var(--cream); color:var(--ink); line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible,button:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    .wrap { max-width:1100px; padding:0 28px; margin:0 auto; }
+    .nav { position:sticky; top:0; z-index:10; background:#ffffffed; border-bottom:1px solid var(--line); backdrop-filter:blur(15px); }
+    .nav-inner { min-height:74px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:17px; letter-spacing:-.03em; }
+    .mark { display:grid; place-items:center; width:36px; height:36px; border-radius:10px; background:#0f3154; color:white; font-size:13px; letter-spacing:.02em; }
+    .links { display:flex; gap:24px; align-items:center; font-size:13px; font-weight:700; color:#344156; }
+    .links a:hover,.footer a:hover { color:var(--accent); }
+    .hero { background:radial-gradient(circle at 88% 25%, #185382 0%, transparent 29%),linear-gradient(130deg,#0c1729 0%,#12294a 78%,#173653); color:white; padding:100px 0 92px; overflow:hidden; }
+    .hero-grid { display:grid; grid-template-columns:1.6fr .9fr; gap:50px; align-items:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; letter-spacing:.15em; text-transform:uppercase; font-weight:750; font-size:11px; color:#6febec; }
+    .dot { width:7px;height:7px;background:#6feaca;border-radius:50%;box-shadow:0 0 0 5px #6feaca22; }
+    h1 { font-size:clamp(39px,5.5vw,69px); line-height:1.07; letter-spacing:-.055em; margin:20px 0 16px; max-width:780px; }
+    .hero h2 { font-size:clamp(17px,2.2vw,23px); line-height:1.5; color:#c0d3ea; letter-spacing:-.02em; margin:0 0 20px; font-weight:500; }
+    .lead { max-width:620px; color:#d0dceb; line-height:1.8; font-size:15px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+    .btn { display:inline-flex; gap:8px; justify-content:center; align-items:center; border:1px solid transparent; border-radius:12px; padding:12px 19px; font-weight:750; font-size:13px; font-family:inherit; cursor:pointer; transition:transform .15s ease,background .15s ease; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { background:var(--cyan); color:#06263b; }
+    .btn-outline { background:transparent; border-color:#54708b; color:#fff; }
+    .graphic { background:linear-gradient(145deg,#24466b,#132741); border:1px solid #507396; border-radius:26px; padding:26px; transform:rotate(2deg); box-shadow:0 30px 85px #030c1f80; }
+    .graphic-head { display:flex; gap:9px; align-items:center; color:#c3e3f4; font-weight:650; text-transform:uppercase; font-size:11px; letter-spacing:.13em; }
+    .graphic-line { height:1px;background:#54718a;margin:18px 0; }
+    .ring { width:195px;height:195px;border-radius:50%;border:34px solid #5fbbd5;box-shadow:0 0 0 14px #2f6486, inset 0 0 0 8px #183d5e, 0 15px 50px #07162960; margin:26px auto 35px; display:grid; place-items:center; transform:rotate(-12deg); }
+    .ring::after { content:"EV";display:grid;place-items:center;width:65px;height:65px;border-radius:50%;background:#0f1e33;color:#8ef2f1;font-weight:900;font-size:23px;letter-spacing:.06em; }
+    .graphic-text { font-size:14px;font-weight:800;color:#e2effc; }
+    .graphic-sub { font-size:11px;color:#abc6d9;margin-top:5px; }
+    section { padding:78px 0; scroll-margin-top:76px; }
+    .section-alt { background:#fff; }
+    .section-tag { font-weight:800;font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:#1260a4; }
+    .section-title { font-size:clamp(28px,3.5vw,40px);letter-spacing:-.045em;line-height:1.15;margin:11px 0 14px; }
+    .section-intro { color:var(--muted);font-size:15px;max-width:690px;margin:0 0 35px; }
+    .highlights { display:grid; grid-template-columns:repeat(3,1fr);gap:20px; margin-top:-35px;position:relative;z-index:1; }
+    .highlights .tile { background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 13px 38px #1e395419;padding:22px; }
+    .tile strong { display:block;font-size:16px;letter-spacing:-.02em; }
+    .tile span { display:block;margin-top:7px;font-size:13px;color:var(--muted);line-height:1.6; }
+    .grid2 { display:grid;grid-template-columns:repeat(2,1fr);gap:20px; }
+    .card { background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:27px; }
+    .section-alt .card { background:#f9fbfe; }
+    .card .num { font-size:11px;font-weight:900;letter-spacing:.14em;color:var(--accent); }
+    h3 { font-size:18px;letter-spacing:-.02em;line-height:1.4;margin:11px 0 9px; }
+    .card p { margin:0;color:var(--muted);font-size:13px;line-height:1.75; }
+    .tags { display:flex;flex-wrap:wrap;gap:8px;margin-top:17px; }
+    .tag { padding:5px 9px;background:#e8f2fb;border-radius:7px;color:#235b86;font-size:11px;font-weight:700; }
+    .timeline { display:grid;gap:17px; }
+    .job { display:grid;grid-template-columns:180px 1fr;gap:25px;padding:22px 0;border-bottom:1px solid var(--line); }
+    .job:last-child { border-bottom:0; }
+    .when { font-size:12px;font-weight:750;color:#60728b;padding-top:6px; }
+    .job h3 { margin:0;font-size:17px; }
+    .company { font-size:13px;color:var(--accent);font-weight:700;margin:4px 0 9px; }
+    .job p { font-size:13px;color:var(--muted);line-height:1.7;margin:0; }
+    .skills { display:grid;grid-template-columns:repeat(2,1fr);gap:18px; }
+    .skills .card { padding:24px; }
+    .skills h3 { margin:0 0 10px;font-size:15px; }
+    .skill-list { display:flex;flex-wrap:wrap;gap:7px; }
+    .skill-list span { font-size:12px;padding:6px 9px;background:#f0f4fa;border:1px solid #e2e9f3;border-radius:7px; }
+    .education { display:grid;gap:14px; }
+    .education .card { display:flex;gap:22px;justify-content:space-between; }
+    .edu-date { font-size:12px;white-space:nowrap;color:var(--muted);font-weight:700;margin-top:12px; }
+    .contact { color:#fff; background:#0c1729; }
+    .contact .section-tag { color:#6febec; }
+    .contact .section-title { max-width:690px; }
+    .contact p { color:#c0d3e8;max-width:650px; }
+    .contact .btn-outline { border-color:#56738f; }
+    .footer { padding:22px 0;background:#07101d;color:#a4bbd0;font-size:12px; }
+    .footer-inner { display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap; }
+    @media (max-width:860px) { .hero-grid { grid-template-columns:1fr; } .graphic { max-width:370px;justify-self:center;width:100%; } .links { gap:12px; } .links a:nth-child(2),.links a:nth-child(3) { display:none; } .highlights { grid-template-columns:1fr; margin-top:18px; } }
+    @media (max-width:580px) { .wrap { padding:0 19px; } .nav-inner { min-height:65px; } .brand { font-size:14px; } .mark { width:32px;height:32px; } .hero { padding:60px 0 40px; } h1 { font-size:40px; } .graphic { display:none; } section { padding:57px 0; } .grid2,.skills { grid-template-columns:1fr; } .job { grid-template-columns:1fr;gap:6px; } .education .card { flex-direction:column;gap:2px; } .edu-date { margin-top:0; } }
+    @media print { .nav,.actions,.graphic,.footer { display:none!important; } .hero { color:#111;background:#fff;padding:10px 0 16px; } .hero h2,.lead { color:#222; } .eyebrow { color:#444; } .highlights { display:none; } body,.section-alt,.contact { color:#111;background:#fff; } .contact p { color:#111; } section { padding:13px 0; } .card { border:1px solid #ddd;break-inside:avoid; } .timeline,.skills,.grid2 { gap:8px; } .section-title { font-size:23px; } .contact .btn { display:none; } .section-tag,.contact .section-tag { color:#333; } .job { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <header class="nav"><div class="wrap nav-inner"><a class="brand" href="#top" aria-label="Go to top"><span class="mark">VS</span><span>Vasanthkumar Selvakumar</span></a><nav class="links" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact ↗</a></nav></div></header>
+  <main id="top">
+    <div class="hero"><div class="wrap hero-grid">
+      <div><div class="eyebrow"><span class="dot"></span> Based in Rostock, Germany</div><h1>Engineering ideas.<br>Practical results.</h1><h2>Vasanthkumar Selvakumar<br>Mechanical Design · Manufacturing · Quality Engineering</h2><p class="lead">Mechanical engineer and M.Sc. Sustainable Maritime Engineering student at the University of Rostock. I bring hands-on experience in CAD, manufacturing support, process improvement, technical documentation and quality assurance.</p><div class="actions"><a class="btn btn-primary" href="#projects">Explore my work ↗</a><a class="btn btn-outline" href="#contact">Contact me</a><button class="btn btn-outline" onclick="window.print()" type="button">Print / Save as PDF ↓</button></div></div>
+      <div class="graphic" aria-hidden="true"><div class="graphic-head"><span>◈</span> Design • Build • Improve</div><div class="graphic-line"></div><div class="ring"></div><div class="graphic-text">Mechanical & Industrial Engineering</div><div class="graphic-sub">Design thinking | Quality systems | Continuous improvement</div></div>
+    </div></div>
+    <div class="wrap highlights" aria-label="Professional focus"><div class="tile"><strong>Mechanical Design</strong><span>3D modelling, manufacturing drawings, design revisions and assembly support.</span></div><div class="tile"><strong>Manufacturing & Quality</strong><span>Quality documentation, root-cause analysis, FMEA, SOPs and process improvement.</span></div><div class="tile"><strong>Data & Reporting</strong><span>Production KPIs, technical reports, Microsoft Excel, Power BI and SAP.</span></div></div>
+    <section class="wrap" id="about"><div class="section-tag">01 / About me</div><h2 class="section-title">Connecting design and production.</h2><p class="section-intro">My background combines mechanical engineering, industrial operations and applied quality management. I enjoy turning technical feedback into practical improvements—whether through CAD revisions, clearer work instructions or more reliable production reporting. I am interested in working-student and engineering opportunities around Rostock.</p></section>
+    <section class="section-alt" id="projects"><div class="wrap"><div class="section-tag">02 / Selected projects</div><h2 class="section-title">Technical work & projects</h2><p class="section-intro">Representative academic and engineering projects showing design, efficiency and analytical thinking.</p><div class="grid2">
+      <article class="card"><div class="num">PROJECT 01</div><h3>Mono-Wheel Electric Vehicle</h3><p>Designed and optimized mechanical components and assemblies for a compact electric vehicle with emphasis on manufacturability, functional performance and engineering analysis.</p><div class="tags"><span class="tag">CAD</span><span class="tag">Mechanical Design</span><span class="tag">Electric Mobility</span></div></article>
+      <article class="card"><div class="num">PROJECT 02</div><h3>Shell Eco-Marathon Vehicle</h3><p>Supported lightweight vehicle design with attention to efficiency, manufacturing constraints and operational reliability.</p><div class="tags"><span class="tag">Vehicle Engineering</span><span class="tag">Lightweight Design</span><span class="tag">Teamwork</span></div></article>
+      <article class="card"><div class="num">PROJECT 03</div><h3>Quality Metrics in Hydroelectric Power Plants</h3><p>Master’s thesis applying Lean Six Sigma principles and operational data analysis to examine performance measurement, reporting quality and process effectiveness.</p><div class="tags"><span class="tag">KPI Analysis</span><span class="tag">Lean Six Sigma</span><span class="tag">Quality Management</span></div></article>
+      <article class="card"><div class="num">PROJECT 04</div><h3>Engineering Documentation & Process Quality</h3><p>Practical work spanning CAD production drawings, operating instructions, deviation reporting and corrective-action follow-up to support engineering and shop-floor teams.</p><div class="tags"><span class="tag">SOPs</span><span class="tag">Siemens NX</span><span class="tag">CAPA</span></div></article>
+    </div></div></section>
+    <section id="experience"><div class="wrap"><div class="section-tag">03 / Experience</div><h2 class="section-title">Where I’ve contributed</h2><p class="section-intro">An overview of relevant engineering and manufacturing experience.</p><div class="timeline">
+      <article class="job"><div class="when">Nov 2024 — Jun 2026</div><div><h3>Graduate Trainee · Engineering & Operations</h3><div class="company">Strogami GmbH, Berlin · via Future Personnel Management</div><p>Supported KPI-based quality reporting and documented production issues. Prepared 18+ work instructions, SOPs and technical reports; assisted with deviation tracking, corrective-action follow-up and process handovers.</p></div></article>
+      <article class="job"><div class="when">Aug 2021 — Oct 2021</div><div><h3>Mechanical Design Intern</h3><div class="company">Neel Metal Products Ltd. · Automotive Supplier</div><p>Produced manufacturing and assembly drawings using Siemens NX and supported prototype changes, engineering revisions and manufacturability reviews.</p></div></article>
+      <article class="job"><div class="when">Mar 2021 — Apr 2021</div><div><h3>Mechanical Design Intern</h3><div class="company">ARMIX Construction Machinery Pvt. Ltd.</div><p>Created 3D CAD models, fabrication drawings and assembly documentation. Worked with workshop teams on prototypes and design changes.</p></div></article>
+      <article class="job"><div class="when">Sep 2017 — Sep 2018</div><div><h3>Trainee Engineer · Assembly & Manufacturing</h3><div class="company">Suurya Engineering and Trades Pvt. Ltd.</div><p>Supported assembly troubleshooting, drawing preparation, production processes and engineering change implementation.</p></div></article>
+      <article class="job"><div class="when">Mar 2016 — Aug 2017</div><div><h3>Junior Engineer · Manufacturing & Quality Assurance</h3><div class="company">Global Industries Plastic Injection Molding Services</div><p>Assisted quality inspections, root-cause analysis, quality recordkeeping and corrective and preventive actions in a production setting.</p></div></article>
+    </div></div></section>
+    <section class="section-alt" id="skills"><div class="wrap"><div class="section-tag">04 / Competencies</div><h2 class="section-title">Tools and technical skills</h2><p class="section-intro">Practical software knowledge and methods across mechanical engineering, production and quality.</p><div class="skills">
+      <article class="card"><h3>CAD & Engineering Design</h3><div class="skill-list"><span>Siemens NX</span><span>CATIA V5</span><span>Creo Parametric</span><span>SolidWorks</span><span>Engineering Drawings</span><span>3D Modelling</span></div></article>
+      <article class="card"><h3>Quality & Manufacturing</h3><div class="skill-list"><span>Quality Assurance</span><span>FMEA</span><span>Root Cause Analysis</span><span>CAPA</span><span>Lean Manufacturing</span><span>Process Optimization</span></div></article>
+      <article class="card"><h3>Reporting & Enterprise Tools</h3><div class="skill-list"><span>Microsoft Excel</span><span>Power BI</span><span>KPI Reporting</span><span>SAP S/4HANA MM</span><span>Siemens Teamcenter</span><span>Technical Documentation</span></div></article>
+      <article class="card"><h3>Engineering Analysis & Languages</h3><div class="skill-list"><span>ANSYS</span><span>MATLAB</span><span>English C1</span><span>German B1</span><span>Tamil</span><span>Kannada</span></div></article>
+    </div></div></section>
+    <section id="education"><div class="wrap"><div class="section-tag">05 / Education</div><h2 class="section-title">Academic background</h2><div class="education">
+      <article class="card"><div><h3>M.Sc. Sustainable Maritime Engineering</h3><p>University of Rostock, Germany · Focus: Wind Energy Systems</p></div><div class="edu-date">2026 — Present</div></article>
+      <article class="card"><div><h3>M.Sc. Industrial Engineering & International Management</h3><p>Hochschule Fresenius, Berlin, Germany · Operations, quality management and process optimization</p></div><div class="edu-date">2022 — 2024</div></article>
+      <article class="card"><div><h3>B.Eng. Mechanical Engineering</h3><p>New Horizon College of Engineering, Bengaluru, India</p></div><div class="edu-date">2018 — 2021</div></article>
+    </div><p style="font-size:13px;color:var(--muted);margin-top:24px"><strong>Training and certifications:</strong> SAP S/4HANA MM, FMEA, Siemens NX, CATIA V5, Creo Parametric and Autodesk Fusion 360 (as listed on CV).</p></div></section>
+    <section class="contact" id="contact"><div class="wrap"><div class="section-tag">06 / Connect</div><h2 class="section-title">Interested in working together?</h2><p>I'm open to discussing working-student, internship and engineering opportunities in Rostock and the surrounding region. Please get in touch to discuss how I could contribute to your team.</p><div class="actions"><a class="btn btn-primary" href="mailto:vasanthkumar.selvakumar@gmail.com?subject=Engineering%20Opportunity%20-%20Rostock">Email me ↗</a><a class="btn btn-outline" href="https://www.linkedin.com/in/vasanthkumar" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><button class="btn btn-outline" type="button" onclick="window.print()">Save portfolio as PDF ↓</button></div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span>© <span id="year">2026</span> Vasanthkumar Selvakumar</span><span>Designed for sharing with recruiters · Rostock, Germany</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
