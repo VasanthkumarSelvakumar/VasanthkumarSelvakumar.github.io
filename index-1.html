@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071d2c" />
+  <meta name="description" content="Portfolio of Vasanthkumar Selvakumar — Mechanical Engineer and M.Sc. Sustainable Maritime Engineering student at the University of Rostock. Explore CAD, manufacturing, quality engineering and sustainable maritime interests." />
+  <meta property="og:title" content="Vasanthkumar Selvakumar | Mechanical × Maritime Engineering" />
+  <meta property="og:description" content="Mechanical design. Manufacturing & quality. A sustainable maritime future." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vasanthkumarselvakumar.github.io/" />
+  <title>Vasanthkumar Selvakumar | Mechanical × Maritime Engineer</title>
+  <style>
+    :root {
+      --deep: #071b2a;
+      --navy: #0b2638;
+      --navy-2: #113b4e;
+      --teal: #35d4c5;
+      --teal-dark: #0c857f;
+      --mint: #bbf7e7;
+      --white: #fff;
+      --paper: #f4f8f7;
+      --pale: #e8f1f0;
+      --ink: #142d3b;
+      --muted: #56707b;
+      --line: #d8e5e5;
+      --sand: #f6d8a7;
+      --radius: 22px;
+      --container: 1210px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin:0; color: var(--ink); background: var(--paper); font-family: 'Aptos', 'Segoe UI', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif; line-height:1.6; -webkit-font-smoothing: antialiased; }
+    a { text-decoration:none; color:inherit; }
+    button { font:inherit; }
+    a:focus-visible, button:focus-visible { outline:3px solid var(--teal); outline-offset:4px; }
+    ::selection { background:var(--teal); color:var(--deep); }
+    .container { width:min(var(--container), calc(100% - 64px)); margin-inline:auto; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .header { position:sticky; top:0; z-index:80; background:rgba(7,27,42,.97); border-bottom:1px solid rgba(194,235,234,.13); color:#f1fbfa; backdrop-filter:blur(20px); }
+    .nav-wrap { min-height:79px; display:flex; align-items:center; justify-content:space-between; gap:25px; }
+    .brand { display:flex; align-items:center; gap:13px; flex-shrink:0; }
+    .brand-mark { display:grid; place-items:center; width:45px; height:45px; border:1px solid rgba(101,234,215,.4); background:#12374a; border-radius:13px; box-shadow:inset 0 0 22px rgba(53,212,197,.1); }
+    .brand-mark svg { width:27px; height:27px; }
+    .brand-copy strong { display:block; font-size:14px; letter-spacing:.015em; line-height:1.2; }
+    .brand-copy span { display:block; margin-top:4px; font-size:9px; letter-spacing:.18em; color:#94b7bf; font-weight:750; text-transform:uppercase; }
+    .nav-links { display:flex; align-items:center; gap:29px; }
+    .nav-links a { font-size:12px; font-weight:720; color:#c5dce1; transition:color .2s; }
+    .nav-links a:hover, .nav-links a[aria-current="location"] { color:#59e8d6; }
+    .nav-links .nav-contact { background:var(--teal); color:#072e34; padding:11px 17px; border-radius:9px; font-weight:800; }
+    .nav-links .nav-contact:hover { background:#b4ffee; color:#052c32; }
+    .menu-toggle { display:none; color:white; background:transparent; border:1px solid #4a6572; border-radius:9px; padding:9px 11px; cursor:pointer; }
+    .progress { position:absolute; bottom:0; left:0; height:2px; width:100%; background:var(--teal); transform-origin:left; transform:scaleX(0); pointer-events:none; }
+    .hero { position:relative; overflow:hidden; background: radial-gradient(ellipse at 71% 39%, #145166 0%, #0c3146 30%, #071b2a 75%); color:white; }
+    .hero::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.16; background-image:linear-gradient(#bbfff216 1px,transparent 1px),linear-gradient(90deg,#bbfff216 1px,transparent 1px); background-size:45px 45px; mask-image:linear-gradient(90deg,transparent 24%,black 100%); }
+    .hero::after { content:""; position:absolute; width:690px; height:690px; right:-300px; top:-320px; border-radius:50%; border:1px solid rgba(106,231,217,.11); box-shadow:0 0 0 75px rgba(68,189,191,.022),0 0 0 150px rgba(68,189,191,.018); pointer-events:none; }
+    .hero-content { position:relative; z-index:2; display:grid; grid-template-columns: 1.02fr 1fr; align-items:center; min-height:660px; gap:8px; padding-block:80px 92px; }
+    .hero-copy { position:relative; z-index:4; padding-right:10px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; color:#8ef4de; text-transform:uppercase; letter-spacing:.19em; font-weight:800; font-size:10px; }
+    .eyebrow .bullet { width:7px; height:7px; border-radius:50%; background:#4ee0c6; box-shadow:0 0 0 5px #4ee0c622; }
+    h1,h2,h3,h4,p { margin-top:0; }
+    h1 { font-size:clamp(43px,5.1vw,76px); font-weight:770; line-height:1.1; letter-spacing:-.065em; margin:25px 0 22px; }
+    h1 .mint { color:#8aefd9; }
+    .hero-lead { color:#bfd7df; max-width:545px; font-size:15px; line-height:1.85; margin:0 0 23px; }
+    .hero-name { display:block; color:#f6faf8; font-size:14px; font-weight:800; margin-bottom:11px; letter-spacing:.01em; }
+    .hero-name span { color:#a0c2c9; font-weight:520; }
+    .hero-actions, .button-row { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+    .hero-actions { margin-top:31px; }
+    .button { display:inline-flex; justify-content:center; align-items:center; gap:11px; border-radius:10px; padding:13px 19px; font-size:12px; line-height:1.3; font-weight:800; border:1px solid transparent; cursor:pointer; transition: transform .2s, background .2s, border-color .2s; }
+    .button:hover { transform:translateY(-2px); }
+    .button svg { width:16px; height:16px; }
+    .button-primary { background:var(--teal); color:#073135; }
+    .button-primary:hover { background:#a8f8e8; }
+    .button-outline { border-color:#668d98; background:#ffffff08; color:white; }
+    .button-outline:hover { background:#ffffff16; border-color:#c7ebe9; }
+    .hero-meta { display:flex; gap:22px; flex-wrap:wrap; align-items:center; margin-top:38px; color:#a3c3cb; font-size:12px; }
+    .meta-sep { height:20px; width:1px; background:#52747e; }
+    .hero-meta span { display:flex; gap:8px; align-items:center; }
+    .hero-meta svg { width:15px; height:15px; stroke:#80ead5; }
+    .hero-scene { width:110%; justify-self:center; max-width:690px; position:relative; margin-left:-20px; }
+    .hero-scene svg { display:block; width:100%; filter:drop-shadow(0 30px 60px rgba(0,6,12,.16)); }
+    .hero-scene .wind-blades { transform-box:fill-box; transform-origin:center; animation:spin 23s linear infinite; }
+    .hero-scene .wind-blades.slow { animation-duration:31s; }
+    .scene-caption { position:absolute; bottom:6%; left:8%; padding:13px 17px; border-radius:12px; background:rgba(7,26,39,.84); border:1px solid #6cbbba55; backdrop-filter:blur(10px); box-shadow:0 9px 24px #05152044; }
+    .scene-caption strong { font-size:10px; letter-spacing:.14em; color:#e5faf5; display:block; }
+    .scene-caption span { font-size:10px; letter-spacing:.07em; color:#81d8d0; }
+    @keyframes spin { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
+    .discipline-band { position:relative; z-index:3; margin-top:-1px; background:#102d40; color:white; border-top:1px solid #24485c; border-bottom:1px solid #24485c; }
+    .discipline-grid { display:grid; grid-template-columns:repeat(3,1fr); }
+    .discipline { display:flex; align-items:center; gap:20px; padding:27px 25px; border-right:1px solid #2d4e5d; }
+    .discipline:first-child { padding-left:0; }
+    .discipline:last-child { border:0; }
+    .discipline .num { font-size:32px; letter-spacing:-.05em; font-weight:750; color:#4fe0cb; line-height:1; }
+    .discipline strong { display:block; font-size:13px; margin-bottom:2px; }
+    .discipline span { font-size:11px; color:#9cbac4; }
+    section { scroll-margin-top:85px; }
+    .section-pad { padding-block:100px; }
+    .section-kicker { display:flex; gap:13px; align-items:center; color:#078980; letter-spacing:.2em; text-transform:uppercase; font-weight:850; font-size:10px; margin-bottom:20px; }
+    .section-kicker::before { content:""; width:25px; height:1px; background:currentColor; }
+    .section-kicker.light { color:#76eedb; }
+    .section-title { font-size:clamp(32px,3.6vw,51px); letter-spacing:-.057em; font-weight:760; line-height:1.15; margin-bottom:19px; }
+    .section-subtitle { max-width:650px; font-size:15px; line-height:1.85; color:var(--muted); }
+    .about-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:100px; align-items:center; }
+    .about .section-title { max-width:710px; }
+    .about p { color:#55717a; font-size:15px; line-height:1.9; }
+    .about p strong { color:#183e4c; }
+    .about-panel { background:#e7f0ef; border:1px solid #d5e4e3; border-radius:24px; padding:29px; position:relative; overflow:hidden; }
+    .about-panel::after { content:""; width:200px; height:200px; border-radius:100%; border:1px solid #a1cfc8; position:absolute; right:-90px; top:-100px; box-shadow:0 0 0 40px #c4e5df33; }
+    .panel-caption { text-transform:uppercase; font-size:11px; letter-spacing:.15em; font-weight:850; color:#0e746e; margin:0 0 24px; }
+    .path-item { display:grid; grid-template-columns:42px 1fr; gap:12px; position:relative; padding-bottom:25px; }
+    .path-item:not(:last-child)::after { content:""; position:absolute; top:31px; left:20px; height:calc(100% - 20px); border-left:1px dashed #83b5b1; }
+    .path-item:last-child { padding-bottom:0; }
+    .path-icon { display:grid; place-items:center; width:40px; height:40px; background:#0b3d48; border-radius:11px; color:#a3f0df; }
+    .path-icon svg { width:20px; height:20px; }
+    .path-item strong { display:block; font-size:14px; padding-top:2px; }
+    .path-item p { margin:4px 0 0; font-size:12px; line-height:1.7; }
+    .focus { background:#fff; }
+    .section-heading-row { display:flex; align-items:end; justify-content:space-between; gap:40px; margin-bottom:40px; }
+    .section-heading-row .section-subtitle { max-width:420px; margin-bottom:7px; }
+    .focus-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .focus-card { border:1px solid #dbe7e5; border-radius:21px; padding:31px 27px; min-height:280px; background:#fbfdfc; position:relative; transition:transform .2s,box-shadow .2s; }
+    .focus-card:hover { transform:translateY(-5px); box-shadow:0 20px 42px #163d4d12; }
+    .focus-card.marine { background:linear-gradient(155deg,#0c3143,#104957); border-color:#265466; color:white; }
+    .focus-card .focus-icon { width:50px; height:50px; display:grid; place-items:center; border-radius:13px; background:#e0f1ef; color:#0e7972; margin-bottom:27px; }
+    .focus-card.marine .focus-icon { background:#1d6570; color:#b4f5e9; }
+    .focus-card svg { width:26px; height:26px; }
+    .focus-card h3 { letter-spacing:-.025em; font-size:18px; margin:0 0 12px; }
+    .focus-card p { font-size:13px; line-height:1.85; color:#607985; margin:0; }
+    .focus-card.marine p { color:#c1dcdf; }
+    .focus-label { font-size:10px; color:#0a9587; text-transform:uppercase; letter-spacing:.13em; font-weight:800; margin-bottom:9px; }
+    .focus-card.marine .focus-label { color:#73f1d8; }
+    .projects { background:var(--deep); color:#edf8f8; position:relative; overflow:hidden; }
+    .projects::before { content:""; position:absolute; inset:0; background-image:linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px); background-size:55px 55px; pointer-events:none; }
+    .projects .container { position:relative; }
+    .projects .section-subtitle { color:#b6cdd6; }
+    .filter-row { display:flex; gap:9px; flex-wrap:wrap; margin:32px 0 28px; }
+    .filter { border-radius:999px; padding:9px 17px; background:transparent; border:1px solid #456575; color:#c1d6d8; cursor:pointer; font-weight:750; font-size:12px; }
+    .filter[aria-pressed="true"] { background:var(--teal); border-color:var(--teal); color:#06343a; }
+    .filter:hover { border-color:var(--teal); }
+    .project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+    .project-card { background:#103448; border:1px solid #2d5365; border-radius:21px; overflow:hidden; transition:transform .25s, border-color .25s; }
+    .project-card:hover { transform:translateY(-4px); border-color:#58acaa; }
+    .project-card[hidden] { display:none!important; }
+    .project-art { background:#103e50; width:100%; height:237px; overflow:hidden; border-bottom:1px solid #366373; }
+    .project-art svg { width:100%; height:100%; display:block; }
+    .project-text { padding:27px 29px 29px; }
+    .project-top { display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:10px; font-weight:850; text-transform:uppercase; letter-spacing:.16em; color:#68e6d2; }
+    .project-top span:last-child { color:#89abb9; }
+    .project-text h3 { font-size:23px; letter-spacing:-.035em; line-height:1.26; margin:13px 0 11px; }
+    .project-text p { color:#aec7d0; font-size:13px; line-height:1.83; margin:0; }
+    .pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:21px; }
+    .pills span { padding:6px 10px; background:#21495a; border:1px solid #326275; border-radius:6px; color:#d3ebeb; font-weight:700; font-size:10px; }
+    .project-note { color:#a0c2ca; font-size:12px; margin-top:23px; }
+    .project-note strong { color:#a7f6e4; }
+    .experience { background:#f7faf9; }
+    .experience-grid { display:grid; grid-template-columns:.64fr 1fr; gap:80px; }
+    .experience .section-title { max-width:380px; }
+    .experience-side { position:sticky; top:123px; align-self:start; }
+    .timeline { border-top:1px solid var(--line); }
+    .role { display:grid; grid-template-columns:125px 1fr; gap:18px; border-bottom:1px solid var(--line); padding:25px 0 27px; }
+    .role-date { color:#05857f; font-size:11px; font-weight:850; letter-spacing:.02em; padding-top:4px; }
+    .role h3 { margin:0 0 4px; font-size:17px; line-height:1.35; letter-spacing:-.03em; }
+    .role-place { color:#2b5c68; font-size:12px; font-weight:750; margin-bottom:9px; }
+    .role p { margin:0; color:#667c83; font-size:12px; line-height:1.82; }
+    .capabilities { background:#eaf3f1; }
+    .skills-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:17px; }
+    .skill-card { padding:26px 29px; border-radius:18px; background:#fff; border:1px solid #d8e6e2; }
+    .skill-card h3 { margin:0 0 18px; font-size:15px; letter-spacing:-.02em; display:flex; align-items:center; gap:11px; }
+    .skill-card h3 span { color:#03978a; font-size:11px; font-weight:900; }
+    .skill-pills { display:flex; flex-wrap:wrap; gap:8px; }
+    .skill-pills span { padding:7px 10px; background:#eff6f5; border:1px solid #e0eeeb; border-radius:7px; font-weight:650; color:#456573; font-size:12px; }
+    .edu { background:#fff; }
+    .edu-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:19px; margin-top:38px; }
+    .edu-card { border:1px solid #d7e6e4; border-radius:19px; padding:28px; display:flex; flex-direction:column; background:#fbfdfc; min-height:260px; }
+    .edu-card.current { background:#12394b; border-color:#1d5862; color:white; }
+    .edu-date { display:flex; align-items:center; gap:8px; margin-bottom:36px; text-transform:uppercase; font-size:11px; letter-spacing:.07em; color:#0a867f; font-weight:850; }
+    .edu-card.current .edu-date { color:#89f1d9; }
+    .edu-card h3 { font-size:20px; line-height:1.3; letter-spacing:-.032em; margin:0 0 12px; }
+    .edu-card p { font-size:12px; line-height:1.7; color:#5b7380; margin:auto 0 0; }
+    .edu-card.current p { color:#bcd8da; }
+    .certificate-line { margin:27px 0 0; color:#637981; font-size:12px; line-height:1.9; }
+    .certificate-line strong { color:#234a52; }
+    .contact { position:relative; overflow:hidden; padding:100px 0; background: radial-gradient(ellipse at 82% 30%, #156575 0%, #0d3c51 33%, #092435 75%); color:white; }
+    .contact::before { content:""; position:absolute; inset:0; opacity:.19; background:repeating-radial-gradient(ellipse at 95% 120%, transparent 0 19px, #70d7c933 20px 21px,transparent 22px 43px); }
+    .contact-grid { position:relative; display:grid; grid-template-columns:1fr .5fr; gap:65px; align-items:center; }
+    .contact .section-title { max-width:790px; }
+    .contact p { color:#b9d9dc; max-width:620px; font-size:14px; line-height:1.85; }
+    .contact-card { border:1px solid #4e8d94; background:#ffffff0b; border-radius:20px; padding:29px; backdrop-filter:blur(8px); }
+    .contact-card .caption { text-transform:uppercase; font-size:10px; font-weight:900; letter-spacing:.15em; color:#74f4de; }
+    .contact-card a { display:block; word-break:break-word; margin-top:11px; margin-bottom:19px; font-size:13px; font-weight:700; }
+    .contact-card a:hover { color:#90fce3; }
+    .contact-card .location { color:#c8e1e0; font-size:12px; border-top:1px solid #477988; padding-top:18px; }
+    .footer { background:#061923; color:#95b8bb; padding:27px 0; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-size:11px; }
+    .footer-inner b { color:#d6eeec; }
+    .footer a:hover { color:var(--teal); }
+    .top-link { position:fixed; bottom:24px; right:22px; z-index:50; display:grid; place-items:center; height:41px; width:41px; border-radius:11px; color:#062b36; background:var(--teal); border:0; cursor:pointer; box-shadow:0 10px 25px #00172555; opacity:0; transform:translateY(12px); transition:opacity .2s, transform .2s; pointer-events:none; }
+    .top-link.show { opacity:1; transform:translateY(0); pointer-events:auto; }
+    .top-link svg { width:19px; height:19px; }
+    @media (max-width:1080px) { .nav-links { gap:17px; } .nav-links a { font-size:11px; } .hero-content { min-height:600px; } .hero-scene { margin-left:-15px; } .about-grid { gap:47px; } .experience-grid { gap:42px; } .contact-grid { gap:35px; } }
+    @media (max-width:820px) {
+      .container { width:calc(100% - 40px); }
+      .menu-toggle { display:inline-flex; align-items:center; gap:8px; }
+      .menu-toggle svg { width:19px; height:19px; }
+      .nav-wrap { min-height:70px; }
+      .nav-links { display:none; position:absolute; top:70px; left:0; right:0; flex-direction:column; align-items:stretch; padding:16px 22px 23px; gap:0; background:#082232; border-bottom:1px solid #305868; box-shadow:0 15px 25px #00132133; }
+      .nav-links.open { display:flex; }
+      .nav-links a { font-size:14px; padding:13px 4px; }
+      .nav-links .nav-contact { padding:14px; text-align:center; margin-top:9px; }
+      .hero-content { grid-template-columns:1fr; padding-top:66px; padding-bottom:40px; gap:15px; }
+      .hero-copy { max-width:690px; }
+      .hero-scene { width:100%; max-width:620px; margin:0 auto; }
+      .hero-scene svg { max-height:430px; }
+      .discipline { padding:22px 13px; gap:10px; }
+      .discipline .num { font-size:25px; }
+      .discipline strong { font-size:11px; }
+      .about-grid, .experience-grid, .contact-grid { grid-template-columns:1fr; gap:35px; }
+      .experience-side { position:static; }
+      .section-pad { padding-block:75px; }
+      .section-heading-row { display:block; }
+      .section-heading-row .section-subtitle { max-width:680px; }
+      .edu-grid { grid-template-columns:repeat(2,1fr); }
+      .edu-card:last-child { grid-column:1 / -1; min-height:185px; }
+      .contact-grid { gap:26px; }
+      .contact-card { max-width:510px; }
+    }
+    @media (max-width:560px) {
+      .container { width:calc(100% - 36px); }
+      .brand-copy strong { font-size:12px; }
+      .brand-copy span { font-size:8px; letter-spacing:.1em; }
+      .brand-mark { width:39px; height:39px; }
+      .hero-content { padding-top:55px; }
+      h1 { font-size:clamp(40px,11vw,54px); }
+      .hero-lead { font-size:14px; }
+      .hero-meta { gap:11px; font-size:11px; }
+      .hero-meta .meta-sep { display:none; }
+      .hero-scene { margin-top:2px; }
+      .hero-scene svg { max-height:305px; }
+      .scene-caption { padding:9px 12px; left:3%; bottom:4%; }
+      .scene-caption strong, .scene-caption span { font-size:8px; }
+      .discipline-grid { grid-template-columns:1fr; }
+      .discipline, .discipline:first-child { padding:15px 0; border-right:0; border-bottom:1px solid #2d4e5d; }
+      .discipline:last-child { border-bottom:0; }
+      .discipline .num { font-size:24px; width:40px; }
+      .section-pad { padding-block:63px; }
+      .section-title { font-size:clamp(30px,9vw,42px); }
+      .about-panel { padding:24px; }
+      .focus-cards, .project-grid, .skills-grid, .edu-grid { grid-template-columns:1fr; }
+      .focus-card { min-height:235px; }
+      .project-art { height:200px; }
+      .project-text { padding:23px; }
+      .project-text h3 { font-size:21px; }
+      .role { grid-template-columns:1fr; gap:4px; }
+      .role-date { padding-top:0; }
+      .edu-card, .edu-card:last-child { grid-column:auto; min-height:205px; }
+      .edu-date { margin-bottom:24px; }
+      .contact { padding-block:73px; }
+      .button-row .button { width:100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
+    @media print {
+      :root { --ink:#111; --muted:#444; }
+      html { scroll-behavior:auto; }
+      body { background:#fff; font-size:11px; }
+      .header,.hero-scene,.hero::before,.hero::after,.discipline-band,.filter-row,.top-link,.footer,.contact-card,.button-row,.hero-actions,.hero-meta { display:none!important; }
+      .container { width:100%; }
+      .hero { background:white!important; color:#111; }
+      .hero-content { display:block; min-height:0; padding:12px 0 28px; }
+      h1 { color:#111; font-size:38px; }
+      h1 .mint,.hero-name,.hero-name span,.hero-lead,.eyebrow { color:#111; }
+      .section-pad,.contact { padding:20px 0; }
+      .focus,.projects,.experience,.capabilities,.edu,.contact { color:#111!important; background:white!important; }
+      .section-title { font-size:23px; }
+      .section-subtitle,.projects .section-subtitle,.project-text p,.contact p { color:#333; }
+      .about-grid,.experience-grid,.focus-cards,.project-grid,.skills-grid,.edu-grid,.contact-grid { display:block; }
+      .about-panel,.focus-card,.project-card,.skill-card,.edu-card,.role { page-break-inside:avoid; break-inside:avoid; padding:10px; margin:10px 0; border:1px solid #aaa; background:#fff!important; color:#111!important; }
+      .about-panel::after,.path-item::after,.project-art,.projects::before { display:none; }
+      .project-text { padding:4px; } .project-text h3,.role h3,.edu-card h3 { font-size:15px; }
+      .project-text p,.role p,.edu-card p,.path-item p,.focus-card p { color:#333!important; }
+      .project-top,.project-top span:last-child,.focus-label,.edu-date,.section-kicker,.section-kicker.light,.contact .section-kicker { color:#333!important; }
+      .pills span,.skill-pills span { color:#333;background:#fff;border-color:#aaa; }
+      .certificate-line { color:#333; }
+      .experience-side { position:static; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="page-header">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="Vasanthkumar Selvakumar, back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="4.2" stroke="#85f0db" stroke-width="2"/><path d="M16 10.5L13.4 2.6C13.1 1.4 14.1.6 15.2 1.1C21 4.1 22 7.3 20 12.4M20.7 19.7l8.2 2.1c1.2.3 1.5 1.6.5 2.2-5.3 3.2-8.8 2.8-12.7-1.4M11.6 19.1l-5.8 6.2c-.9.9-2.1.5-2.2-.7-.6-6.4 1.1-9.6 6.6-11.8" stroke="#85f0db" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-copy"><strong>Vasanthkumar Selvakumar</strong><span>Mechanical × Maritime Engineering</span></span>
+      </a>
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg> Menu
+      </button>
+      <nav class="nav-links" id="main-menu" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#focus">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact" class="nav-contact">Let's connect ↗</a>
+      </nav>
+    </div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="bullet"></span> Engineering a more sustainable future</div>
+          <h1 id="hero-title">From mechanical<br>precision to<br><span class="mint">maritime progress.</span></h1>
+          <span class="hero-name">Vasanthkumar Selvakumar <span> / Engineering Portfolio</span></span>
+          <p class="hero-lead">Mechanical Engineer and M.Sc. Sustainable Maritime Engineering student at the University of Rostock. Bringing experience in CAD, manufacturing and quality engineering to a growing interest in offshore wind and sustainable maritime technology.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="button button-primary">Explore my projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a href="#contact" class="button button-outline">Get in touch ↗</a>
+          </div>
+          <div class="hero-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Rostock, Germany</span>
+            <i class="meta-sep" aria-hidden="true"></i>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linejoin="round"><path d="m2 10 10-6 10 6-10 6-10-6ZM6 12v5c4 3 8 3 12 0v-5M22 10v8"/></svg> University of Rostock · M.Sc.</span>
+          </div>
+        </div>
+        <div class="hero-scene" role="img" aria-label="Stylized offshore wind farm engineering illustration, with a turbine, sea waves and a technical grid">
+          <svg viewBox="0 0 670 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="sky" cx="62%" cy="40%" r="65%"><stop stop-color="#2b7885" stop-opacity=".9"/><stop offset=".48" stop-color="#164c61" stop-opacity=".65"/><stop offset="1" stop-color="#0c293d" stop-opacity="0"/></radialGradient>
+              <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#22808a" stop-opacity=".8"/><stop offset="1" stop-color="#082b40" stop-opacity=".35"/></linearGradient>
+              <linearGradient id="tower" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d0f4ec"/><stop offset="1" stop-color="#4c9aa5"/></linearGradient>
+              <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c9f3eb"/><stop offset="1" stop-color="#5abac4"/></linearGradient>
+            </defs>
+            <rect x="0" y="0" width="670" height="600" fill="url(#sky)"/>
+            <g opacity=".24" stroke="#80c8c8" fill="none"><circle cx="377" cy="281" r="197" stroke-dasharray="4 10"/><circle cx="377" cy="281" r="142"/><circle cx="377" cy="281" r="92" stroke-dasharray="4 7"/><path d="M50 282h565M377 32v501" stroke-dasharray="3 9"/><path d="M74 96h81m-81 0v81M581 90h-73m73 0v71M90 443h70m-70 0v-70"/></g>
+            <g stroke="#80e3d3" fill="none" opacity=".65"><path d="M377 84V52H555"/><circle cx="377" cy="84" r="3" fill="#80e3d3"/><path d="M500 347h100v-33"/><circle cx="500" cy="347" r="3" fill="#80e3d3"/></g>
+            <text x="436" y="45" font-size="9" fill="#a9ede3" letter-spacing="2.7" font-family="monospace">OFFSHORE // 01</text>
+            <text x="511" y="305" font-size="9" fill="#9ae0dd" letter-spacing="2.0" font-family="monospace">ENERGY</text>
+            <path d="M0 413Q90 394 195 411T391 409T670 406V600H0Z" fill="url(#water)"/>
+            <g fill="none" stroke="#5acecf" opacity=".3"><path d="M0 445q54 -10 107 0t109 0t109 0t108 0t109 0t128 0"/><path d="M0 476q58 -10 116 0t116 0t116 0t116 0t116 0"/><path d="M0 508q46 -8 93 0t93 0t93 0t93 0t93 0t93 0t93 0"/><path d="M0 550q63 -9 126 0t126 0t126 0t126 0t126 0"/></g>
+            <!-- distant turbines -->
+            <g opacity=".5" stroke="#8bdad8" stroke-width="3" stroke-linecap="round" fill="none">
+              <path d="M147 246l-5 162m5-162 0-73m0 73-63 23m63-23 43 48"/><circle cx="147" cy="246" r="4" fill="#a5e2db"/><path d="M563 309l-3 103m3-103 0-51m0 51-41 16m41-16 31 32"/><circle cx="563" cy="309" r="3" fill="#a5e2db"/>
+            </g>
+            <!-- primary turbine -->
+            <g>
+              <path d="M364 274 351 419h52l-13-145Z" fill="url(#tower)"/>
+              <path d="m373 287-8 116" stroke="#d4f5ef" opacity=".65" stroke-width="2"/>
+              <path d="M348 408h57l16 19h-92Z" fill="#0c394b" stroke="#78b6b8" stroke-width="1.5"/>
+              <path d="M359 426V455h34v-29" fill="#1c6978" stroke="#8cd1c9" stroke-width="2"/>
+              <path d="M368 448V486m14-38v38" stroke="#67b0b5" stroke-width="4"/>
+              <path d="M372 278h26l3-13h-29Z" fill="#bcebe8"/>
+              <g class="wind-blades">
+                <path d="M378 274C364 251 371 178 376 111c3-33 11-56 16-55 8 1 3 33 3 54l-5 164Z" fill="url(#blade)" stroke="#9de9dc" stroke-width="1.5"/>
+                <path d="M378 274C351 282 286 326 233 369c-26 21-41 41-38 45 6 6 32-15 50-25l141-109Z" fill="url(#blade)" stroke="#9de9dc" stroke-width="1.5"/>
+                <path d="M378 274C401 300 469 328 535 356c30 12 56 15 58 11 3-8-30-20-49-31l-155-71Z" fill="url(#blade)" stroke="#9de9dc" stroke-width="1.5"/>
+              </g>
+              <circle cx="378" cy="274" r="14" fill="#d8fff1" stroke="#2d909b" stroke-width="3"/>
+              <circle cx="378" cy="274" r="4.5" fill="#3a9ba1"/>
+            </g>
+            <!-- offshore platform -->
+            <g stroke-linejoin="round"><path d="M502 414l95-1-16 15-64 2Z" fill="#b2e6dd"/><path d="M522 430v48m51-50v48" stroke="#6bbab8" stroke-width="5"/><path d="M535 400h51v13h-51z" fill="#174b5b" stroke="#79b9b9"/><path d="M542 388v12m36-12v12" stroke="#a1e3d5" stroke-width="3"/></g>
+            <g opacity=".8" fill="none" stroke="#66d0cf" stroke-width="1.5"><path d="M30 516h90m40 0h50m250 25h120m16 0h45M75 573h200m36 0h90"/></g>
+            <g fill="#b7f6e8" font-family="monospace" font-size="10" letter-spacing="1.5"><text x="57" y="107" opacity=".85">BLUE ENERGY</text><text x="58" y="124" opacity=".55">MECHANICAL × MARITIME</text></g>
+            <g fill="#60d4c9" opacity=".6"><circle cx="79" cy="163" r="2"/><circle cx="598" cy="172" r="2"/><circle cx="609" cy="379" r="2"/><circle cx="170" cy="360" r="2"/></g>
+          </svg>
+          <div class="scene-caption" aria-hidden="true"><strong>OFFSHORE WIND · CONCEPT VISUAL</strong><span>RENEWABLE SYSTEMS / MARITIME FUTURE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="discipline-band" aria-label="Three engineering focus areas"><div class="container discipline-grid">
+      <div class="discipline"><span class="num">01</span><div><strong>Design with precision</strong><span>CAD · Components · Assemblies</span></div></div>
+      <div class="discipline"><span class="num">02</span><div><strong>Improve performance</strong><span>Manufacturing · Quality · Lean</span></div></div>
+      <div class="discipline"><span class="num">03</span><div><strong>Think sustainably</strong><span>Maritime studies · Wind energy interest</span></div></div>
+    </div>
+    </div>
+
+    <section class="about section-pad" id="about"><div class="container about-grid">
+      <div>
+        <div class="section-kicker">01 / About me</div>
+        <h2 class="section-title">A mechanical foundation. <br>A maritime direction.</h2>
+        <p>I'm <strong>Vasanthkumar Selvakumar</strong>, a mechanical engineer with experience spanning engineering drawings, manufacturing operations, technical documentation and quality assurance.</p>
+        <p>I'm currently pursuing an <strong>M.Sc. in Sustainable Maritime Engineering at the University of Rostock</strong>, with an academic focus on wind energy systems. My goal is to apply practical engineering thinking to efficient, reliable and more sustainable technologies.</p>
+        <p>I'm particularly interested in working-student roles and engineering collaborations in mechanical design, production, quality, renewable energy and maritime industries.</p>
+      </div>
+      <div class="about-panel">
+        <div class="panel-caption">My engineering journey</div>
+        <div class="path-item"><div class="path-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 6h16v12H4zM8 6v12M12 9h5M12 13h5M7 21h10"/></svg></div><div><strong>Mechanical design</strong><p>CAD modelling, assembly drawings, design revisions and manufacturability.</p></div></div>
+        <div class="path-item"><div class="path-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3 20h18M5 20V9l5 3V6l6 4V4l4 3v13M8 16h1m4 0h1m4 0h1"/></svg></div><div><strong>Manufacturing & quality</strong><p>Production support, process documentation, improvement and quality reporting.</p></div></div>
+        <div class="path-item"><div class="path-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 12V3m0 9-7 7m7-7 7 7M3 21h18"/><circle cx="12" cy="12" r="2"/><path d="M12 9 9 3m3 6 3-6"/></svg></div><div><strong>Sustainable maritime engineering</strong><p>Current graduate studies with interest in offshore wind and marine engineering systems.</p></div></div>
+      </div>
+    </div></section>
+
+    <section class="focus section-pad" id="focus"><div class="container">
+      <div class="section-kicker">02 / Engineering focus</div>
+      <div class="section-heading-row"><h2 class="section-title">One engineer.<br>Connected disciplines.</h2><p class="section-subtitle">Grounded in hands-on mechanical and industrial work, while building new expertise through sustainable maritime studies.</p></div>
+      <div class="focus-cards">
+        <article class="focus-card"><div class="focus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8 12 4l8 4-8 4-8-4Zm0 0v8l8 4 8-4V8M12 12v8M9 9l6-3"/></svg></div><div class="focus-label">Core experience</div><h3>Mechanical Design & CAD</h3><p>3D models, manufacturing drawings, mechanical components, assembly documentation and design revisions informed by production constraints.</p></article>
+        <article class="focus-card"><div class="focus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m4 16 4-4 4 3 8-9M16 6h4v4M4 21h16"/><circle cx="8" cy="5" r="2"/></svg></div><div class="focus-label">Core experience</div><h3>Manufacturing & Quality</h3><p>Quality assurance, KPI reporting, root-cause analysis, process improvement, FMEA awareness, SOPs and corrective-action follow-up.</p></article>
+        <article class="focus-card marine"><div class="focus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="10" r="2"/><path d="M12 10V3m0 7-6 6m6-6 6 6M4 21h16m-8-9v9M12 8 9 3m3 5 3-5"/></svg></div><div class="focus-label">Current study & interest</div><h3>Maritime & Offshore Wind</h3><p>Developing academic knowledge of sustainable maritime engineering and wind energy systems, building on a mechanical engineering foundation.</p></article>
+      </div>
+    </div></section>
+
+    <section class="projects section-pad" id="projects"><div class="container">
+      <div class="section-kicker light">03 / Selected work</div>
+      <div class="section-heading-row"><h2 class="section-title">Projects & practical<br>engineering work.</h2><p class="section-subtitle">A selection of previous mechanical projects and analytical work. Offshore wind is an area of current study, not presented here as a completed project.</p></div>
+      <div class="filter-row" role="group" aria-label="Filter projects">
+        <button type="button" class="filter" aria-pressed="true" data-filter="all">All projects</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="mechanical">Mechanical & EV</button>
+        <button type="button" class="filter" aria-pressed="false" data-filter="quality">Quality & Analysis</button>
+      </div>
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-category="mechanical">
+          <div class="project-art" role="img" aria-label="Stylized CAD drawing of a monowheel electric vehicle">
+            <svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#174b61"/><stop offset="1" stop-color="#0b2939"/></linearGradient></defs>
+              <rect width="560" height="250" fill="url(#p1)"/><g stroke="#88d5cf" opacity=".09"><path d="M0 25h560M0 50h560M0 75h560M0 100h560M0 125h560M0 150h560M0 175h560M0 200h560M0 225h560M30 0v250M60 0v250M90 0v250M120 0v250M150 0v250M180 0v250M210 0v250M240 0v250M270 0v250M300 0v250M330 0v250M360 0v250M390 0v250M420 0v250M450 0v250M480 0v250M510 0v250M540 0v250"/></g>
+              <g transform="translate(278 124)"><circle r="94" fill="#103747" stroke="#67dfd1" stroke-width="13"/><circle r="72" fill="#0a2637" stroke="#347f91" stroke-width="4"/><circle r="47" fill="#2a7483" stroke="#9fe8df" stroke-width="3"/><circle r="19" fill="#e1f8ef" stroke="#3fb0ae" stroke-width="6"/><path d="M0-67v43M0 24v43M-67 0h43M24 0h43M-48-48l29 29m38 38 29 29M48-48 19-19m-38 38-29 29" stroke="#78bdbf" stroke-width="4"/><path d="M-72-4h-38m182 0h37M0-94v-23" stroke="#79e4d7" stroke-width="1.4"/></g><g stroke="#97dcd7" fill="none" opacity=".65"><path d="M399 60h91v-25M378 184h123v28M145 129H66v-43"/><circle cx="399" cy="60" r="3" fill="#76daca"/><circle cx="378" cy="184" r="3" fill="#76daca"/></g><g font-family="monospace" fill="#a7eae1" font-size="10" letter-spacing="1.5"><text x="390" y="28">01 / DRIVE</text><text x="410" y="230">MONOWHEEL EV</text><text x="27" y="30">MECH. DESIGN</text></g>
+            </svg>
+          </div><div class="project-text"><div class="project-top"><span>Academic · Mechanical</span><span>01 / 04</span></div><h3>Mono-Wheel Electric Vehicle</h3><p>Designed and optimized mechanical components and assemblies for a compact electric vehicle, with emphasis on engineering analysis, manufacturability and performance.</p><div class="pills"><span>CAD</span><span>Mechanical Design</span><span>Electric Mobility</span></div></div>
+        </article>
+        <article class="project-card" data-category="mechanical">
+          <div class="project-art" role="img" aria-label="Technical side silhouette of a low-profile efficiency vehicle">
+            <svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="p2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123d56"/><stop offset="1" stop-color="#091f31"/></linearGradient></defs><rect width="560" height="250" fill="url(#p2)"/><g stroke="#9be1d7" opacity=".11"><path d="M20 60h520M20 120h520M20 180h520M100 0v250M200 0v250M300 0v250M400 0v250M500 0v250"/></g><path d="M60 179q19-14 58-18c50-6 77-54 135-63 33-5 58 1 87 19l61 32 57 9q17 3 25 18l7 18H70Z" fill="#266579" stroke="#8fe5d6" stroke-width="3"/><path d="M175 158q38-47 80-50 35-4 65 12l44 28Z" fill="#0b283c" stroke="#6cc0cb" stroke-width="2"/><path d="M72 182h419" stroke="#aef0dd" stroke-width="2"/><g><circle cx="152" cy="184" r="27" fill="#0c293a" stroke="#a2e8e0" stroke-width="5"/><circle cx="152" cy="184" r="11" fill="#439bad"/><circle cx="411" cy="184" r="27" fill="#0c293a" stroke="#a2e8e0" stroke-width="5"/><circle cx="411" cy="184" r="11" fill="#439bad"/></g><path d="M75 212h410m-333 9v-17m259 17v-17" stroke="#67bcbc" stroke-width="1.5"/><g font-family="monospace" fill="#a7eae1" font-size="10" letter-spacing="2"><text x="26" y="31">VEHICLE EFFICIENCY</text><text x="409" y="33">02 / EV</text></g></svg>
+          </div><div class="project-text"><div class="project-top"><span>Academic · Vehicle design</span><span>02 / 04</span></div><h3>Shell Eco-Marathon Vehicle</h3><p>Supported lightweight vehicle engineering and design development, considering energy efficiency, manufacturing constraints and operational reliability.</p><div class="pills"><span>Vehicle Engineering</span><span>Lightweight Design</span><span>Team Collaboration</span></div></div>
+        </article>
+        <article class="project-card" data-category="quality">
+          <div class="project-art" role="img" aria-label="Illustrative operational data chart for quality performance metrics">
+            <svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="250" fill="#113a4e"/><g stroke="#5ea5af" opacity=".2"><path d="M50 40h465M50 78h465M50 116h465M50 154h465M50 192h465M50 230h465M100 20v210M160 20v210M220 20v210M280 20v210M340 20v210M400 20v210M460 20v210"/></g><path d="M65 184 128 168 192 181 254 122 314 144 379 83 449 96 506 53" stroke="#7df0d7" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="m65 184 63-16 64 13 62-59 60 22 65-61 70 13 57-43v151H65Z" fill="#40bcab" fill-opacity=".14"/><g fill="#b4fbeb" stroke="#0b4253" stroke-width="3"><circle cx="65" cy="184" r="5"/><circle cx="128" cy="168" r="5"/><circle cx="192" cy="181" r="5"/><circle cx="254" cy="122" r="5"/><circle cx="314" cy="144" r="5"/><circle cx="379" cy="83" r="5"/><circle cx="449" cy="96" r="5"/><circle cx="506" cy="53" r="5"/></g><g font-family="monospace" fill="#c1efeb" font-size="10" letter-spacing="2"><text x="32" y="25">QUALITY METRICS</text><text x="380" y="223">KPI / ANALYSIS</text></g></svg>
+          </div><div class="project-text"><div class="project-top"><span>Master's research · Analysis</span><span>03 / 04</span></div><h3>Quality Metrics in Hydroelectric Power Plants</h3><p>Master's thesis examining operational performance measurement and quality reporting, using Lean Six Sigma concepts and data analysis to explore process effectiveness.</p><div class="pills"><span>KPI Analysis</span><span>Quality Management</span><span>Lean Six Sigma</span></div></div>
+        </article>
+        <article class="project-card" data-category="quality">
+          <div class="project-art" role="img" aria-label="Illustration of engineering drawings and process documentation">
+            <svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="250" fill="#0e3549"/><g stroke="#70b9b9" opacity=".15"><path d="M0 50h560M0 100h560M0 150h560M0 200h560M70 0v250M140 0v250M210 0v250M280 0v250M350 0v250M420 0v250M490 0v250"/></g><rect x="90" y="28" width="195" height="191" rx="5" fill="#174758" stroke="#72c1be" stroke-width="2"/><path d="M111 57h145M111 72h89M111 88h127" stroke="#82bfc4" stroke-width="5" stroke-linecap="round"/><g fill="none" stroke="#a1eadd" stroke-width="2"><rect x="123" y="119" width="124" height="66" rx="3"/><path d="m130 151 25-20h40l24 20-24 20h-40zM157 130v42m39-41v42"/><circle cx="174" cy="151" r="11"/></g><rect x="271" y="55" width="201" height="166" rx="6" fill="#1a5263" stroke="#9be0d7" stroke-width="2"/><g stroke="#b4e8df" stroke-width="4" stroke-linecap="round"><path d="M295 88h149M295 105h87M295 130h128M295 149h148M295 168h107"/></g><g fill="none" stroke="#7ae9d8" stroke-width="2"><path d="m295 192 10 10 19-20M363 192l10 10 19-20"/></g><g font-family="monospace" fill="#a7eae1" font-size="10" letter-spacing="1.7"><text x="25" y="22">SOP / CAD / CAPA</text><text x="358" y="235">DOCUMENT CONTROL</text></g></svg>
+          </div><div class="project-text"><div class="project-top"><span>Professional · Operations</span><span>04 / 04</span></div><h3>Engineering Documentation & Process Quality</h3><p>Supported shop-floor and engineering workflows through drawings, deviation reporting, corrective-action follow-up and preparation of more than 18 work instructions, SOPs and technical reports.</p><div class="pills"><span>SOPs</span><span>Production Quality</span><span>Technical Documentation</span></div></div>
+        </article>
+      </div>
+      <p class="project-note"><strong>About the visuals:</strong> Technical illustrations on this page are stylized graphics, not original CAD screenshots or photographs of completed projects.</p>
+    </div></section>
+
+    <section class="experience section-pad" id="experience"><div class="container experience-grid">
+      <div class="experience-side"><div class="section-kicker">04 / Professional experience</div><h2 class="section-title">Engineering in practice.</h2><p class="section-subtitle">Experience connecting design offices, production environments and quality systems — with practical attention to documentation and teamwork.</p></div>
+      <div class="timeline">
+        <article class="role"><div class="role-date">2024 — 2026</div><div><h3>Graduate Trainee · Engineering & Operations</h3><div class="role-place">Strogami GmbH, Berlin · via Future Personnel Management</div><p>Developed KPI-based reporting, supported deviation tracking and improvement activities, and prepared more than 18 SOPs, work instructions and technical reports.</p></div></article>
+        <article class="role"><div class="role-date">2021</div><div><h3>Mechanical Design Intern</h3><div class="role-place">Neel Metal Products Ltd. · Automotive supplier</div><p>Created manufacturing and assembly drawings in Siemens NX; supported design revisions, prototype builds and manufacturability requirements.</p></div></article>
+        <article class="role"><div class="role-date">2021</div><div><h3>Mechanical Design Intern</h3><div class="role-place">ARMIX Construction Machinery Pvt. Ltd.</div><p>Prepared mechanical CAD models, fabrication and assembly drawings, and coordinated design modifications with workshop teams.</p></div></article>
+        <article class="role"><div class="role-date">2017 — 2018</div><div><h3>Trainee Engineer · Assembly & Manufacturing</h3><div class="role-place">Suurya Engineering and Trades Pvt. Ltd.</div><p>Supported assembly troubleshooting, engineering documentation, pilot builds and improvements based on shop-floor feedback.</p></div></article>
+        <article class="role"><div class="role-date">2016 — 2017</div><div><h3>Junior Engineer · Manufacturing & Quality Assurance</h3><div class="role-place">Global Industries Plastic Injection Molding Services</div><p>Worked on quality records, root-cause analysis, inspection documentation and corrective-action activities in manufacturing.</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="capabilities section-pad" id="skills"><div class="container">
+      <div class="section-kicker">05 / Technical toolbox</div>
+      <div class="section-heading-row"><h2 class="section-title">Tools, methods<br>& engineering skills.</h2><p class="section-subtitle">A technical background across CAD, industrial operations, quality management and engineering data.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card"><h3><span>01</span> CAD & Mechanical Design</h3><div class="skill-pills"><span>Siemens NX</span><span>CATIA V5</span><span>Creo Parametric</span><span>SolidWorks</span><span>3D Modelling</span><span>Engineering Drawings</span></div></article>
+        <article class="skill-card"><h3><span>02</span> Manufacturing & Quality</h3><div class="skill-pills"><span>Manufacturing Engineering</span><span>Quality Assurance</span><span>FMEA</span><span>Root Cause Analysis</span><span>CAPA</span><span>Lean Manufacturing</span></div></article>
+        <article class="skill-card"><h3><span>03</span> Data & Enterprise Tools</h3><div class="skill-pills"><span>Microsoft Excel</span><span>Power BI</span><span>KPI Reporting</span><span>SAP S/4HANA MM</span><span>Teamcenter</span><span>SOPs & Documentation</span></div></article>
+        <article class="skill-card"><h3><span>04</span> Analysis & Communication</h3><div class="skill-pills"><span>ANSYS</span><span>MATLAB</span><span>Process Optimization</span><span>English · C1</span><span>German · B1</span><span>Tamil & Kannada</span></div></article>
+      </div>
+    </div></section>
+
+    <section class="edu section-pad" id="education"><div class="container">
+      <div class="section-kicker">06 / Education & learning</div>
+      <h2 class="section-title">Built on engineering.<br>Growing into maritime.</h2>
+      <p class="section-subtitle">My academic background connects mechanical design with industrial management and a new focus on sustainable maritime systems.</p>
+      <div class="edu-grid">
+        <article class="edu-card current"><div class="edu-date">● 2026 — Present · Current studies</div><h3>M.Sc. Sustainable Maritime Engineering</h3><p>University of Rostock, Germany<br>Academic focus: Wind Energy Systems</p></article>
+        <article class="edu-card"><div class="edu-date">2022 — 2024</div><h3>M.Sc. Industrial Engineering & International Management</h3><p>Hochschule Fresenius, Berlin, Germany<br>Operations · Quality · Process Optimization</p></article>
+        <article class="edu-card"><div class="edu-date">2018 — 2021</div><h3>B.Eng. Mechanical Engineering</h3><p>New Horizon College of Engineering, Bengaluru, India</p></article>
+      </div>
+      <p class="certificate-line"><strong>Additional training & certifications listed on CV:</strong> SAP S/4HANA MM · FMEA · Siemens NX · CATIA V5 · Creo Parametric · Autodesk Fusion 360</p>
+    </div></section>
+
+    <section class="contact" id="contact"><div class="container contact-grid">
+      <div><div class="section-kicker light">07 / Let's connect</div><h2 class="section-title">Let's engineer<br>what comes next.</h2><p>Interested in mechanical design, quality engineering or sustainable maritime technology? I'm open to working-student, internship and engineering opportunities in Rostock and the surrounding region.</p><div class="button-row" style="margin-top:28px"><a href="mailto:vasanthkumar.selvakumar@gmail.com?subject=Engineering%20Opportunity%20-%20Rostock" class="button button-primary">Email me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="https://www.linkedin.com/in/vasanthkumar-selvakumar-b933b8165" target="_blank" rel="noopener noreferrer" class="button button-outline">Connect on LinkedIn ↗</a><button class="button button-outline" type="button" onclick="window.print()">Save portfolio as PDF ↓</button></div></div>
+      <aside class="contact-card"><div class="caption">Direct contact</div><a href="mailto:vasanthkumar.selvakumar@gmail.com">vasanthkumar.selvakumar@gmail.com ↗</a><div class="caption">Professional network</div><a href="https://www.linkedin.com/in/vasanthkumar-selvakumar-b933b8165" target="_blank" rel="noopener noreferrer">View my LinkedIn profile ↗</a><div class="location">Based in Rostock, Germany · Open to engineering opportunities</div></aside>
+    </div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> <b>Vasanthkumar Selvakumar</b> · Designed around mechanical × maritime engineering</span><a href="#top">Back to top ↑</a></div></footer>
+  <button class="top-link" id="top-link" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m5 15 7-7 7 7"/></svg></button>
+  <script>
+    (function() {
+      'use strict';
+      var year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+      var toggle = document.getElementById('menu-toggle');
+      var menu = document.getElementById('main-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          var expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          toggle.setAttribute('aria-label', expanded ? 'Open navigation menu' : 'Close navigation menu');
+          menu.classList.toggle('open', !expanded);
+        });
+        menu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { menu.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation menu'); }); });
+      }
+      var filters = document.querySelectorAll('[data-filter]');
+      var cards = document.querySelectorAll('[data-category]');
+      filters.forEach(function(btn) { btn.addEventListener('click', function() {
+        var type = btn.getAttribute('data-filter');
+        filters.forEach(function(b) { b.setAttribute('aria-pressed', String(b === btn)); });
+        cards.forEach(function(card) { card.hidden = type !== 'all' && card.getAttribute('data-category') !== type; });
+      }); });
+      var progress = document.getElementById('progress');
+      var topButton = document.getElementById('top-link');
+      var ticking = false;
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function() {
+          var max = document.documentElement.scrollHeight - window.innerHeight;
+          if (progress) progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+          if (topButton) topButton.classList.toggle('show', window.scrollY > 600);
+          ticking = false;
+        });
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      window.addEventListener('resize', onScroll, {passive:true});
+      onScroll();
+      if (topButton) topButton.addEventListener('click', function() { window.scrollTo({top:0,behavior:'smooth'}); });
+    })();
+  </script>
+</body>
+</html>
